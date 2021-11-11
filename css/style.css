@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #;
+    --secundary-color: #;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;    
+}
+html {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background: rgb(18,12,107);
+    background: -moz-linear-gradient(180deg, rgba(18,12,107,1) 0%, rgba(37,37,182,1) 18%, rgba(0,212,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(18,12,107,1) 0%, rgba(37,37,182,1) 18%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(180deg, rgba(18,12,107,1) 0%, rgba(37,37,182,1) 18%, rgba(0,212,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#120c6b",endColorstr="#00d4ff",GradientType=1);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.wraper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo {
+    background-color: white;
+    width: 40vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* header */
+.todo__title {
+    width: 100%;
+}
+.todo__title h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Input add new tasks */
+.todo__new-item {
+    width: 100%;
+    height: 45px;
+    display: flex;
+}
+.todo__new-item > input{
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+    font-size: 17px;
+    padding-left: 15px;
+    outline: none;
+}.todo__new-item > input:focus {
+    border: 1px solid black;
+}
+
+.btn {
+    width: 15%;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    background-color: green;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* List items */
+.todo__list {
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.todo__item {
+    background-color: rgb(212, 212, 212);
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.todo__item > div {
+    width: 80%;
+}
+.todo__item:hover {
+    cursor: pointer;
+    transition: all .3s ease;
+    background-color: rgb(192, 192, 192);
+}
+
+.todo__item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo__item > input[type='button'],
+.todo__item > input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    font: inherit;
+}
+
+.todo__item > input[type='button'] {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+
+.todo__item > input[type='checkbox']:checked + div {
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 920px) {
+    .todo {
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 580px) {
+    .todo {
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 470px) {
+    .todo {
+        width: 95vw;
+    }
+    .todo__title h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
