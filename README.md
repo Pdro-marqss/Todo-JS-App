@@ -5,8 +5,11 @@
 ![GIF do projeto em funcionamento](./todo.gif)
 >Gif do projeto em funcionamento
 
-<h4 align="center"><a href="#" target="_blank">Use o app clicando aqui</a></h4>
+<br>
 
+<h4 align="center"><a href="https://pdro-marqss.github.io/Todo-JS-App/" target="_blank">Use o app clicando aqui</a></h4>
+
+<br>
 
 ## Tecnologias utilizadas
 Para o desenvolvimento dessa aplicação, foram utilizadas as tecnologias:
